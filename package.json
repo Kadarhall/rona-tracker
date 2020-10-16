@@ -65,7 +65,7 @@
     "cy:verify": "cypress verify",
     "develop": "gatsby develop",
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write $PWD/'**/*.js'",
-    "lint": "eslint -c ./config/eslint.config.js . --ext .js",
+    "lint": "",
     "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest --config ./config/jest.config.js",
@@ -80,7 +80,7 @@
   "lint-staged": {
     "**/*.js": [
       "yarn format",
-      "yarn lint"
+      ""
     ]
   },
   "homepage": "http://rona-tracker.surge.sh",
