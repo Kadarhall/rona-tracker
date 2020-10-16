@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: siteMetadata.companyName,
         short_name: siteMetadata.companyName,
-        start_url: '/',
+        start_url: 'http://rona-tracker.surge.sh',
         icon: 'src/assets/images/react-leaflet-icon.png',
       },
     },

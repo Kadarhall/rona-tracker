@@ -26,7 +26,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
-    "react-leaflet": "^2.7.0"
+    "react-leaflet": "^2.7.0",
+    "surge": "^0.21.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -68,8 +69,8 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest --config ./config/jest.config.js",
-    "test:e2e:open": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:run": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:open": "start-server-and-test develop http://rona-tracker.surge.sh cy:open",
+    "test:e2e:run": "start-server-and-test develop http://rona-tracker.surge.sh cy:run"
   },
   "husky": {
     "hooks": {
@@ -82,7 +83,7 @@
       "yarn lint"
     ]
   },
-  "homepage": "http://ronavirus.surge.sh",
+  "homepage": "http://rona-tracker.surge.sh",
   "repository": {
     "type": "git",
     "url": "https://fast-earth-4740.herokuapp.com/portfolio"

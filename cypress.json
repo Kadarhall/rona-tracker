@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:8000/",
+  "baseUrl": "http://rona-tracker.surge.sh",
   "pluginsFile": "tests/cypress-plugins",
   "supportFile": "tests/cypress-support",
   "integrationFolder": "tests/integrations",
