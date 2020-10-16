@@ -111,13 +111,36 @@ const IndexPage = () => {
     geoJsonLayers.addTo( map );
   }
 
+  
   const mapSettings = {
     center: CENTER,
     defaultBaseMap: 'Mapbox',
     zoom: DEFAULT_ZOOM,
-    minZoom: 2,
     mapEffect,
   };
+
+  React.useEffect(() => {
+    // window is accessible here.
+    const mq = window.matchMedia( "(max-width: 600px)" );
+
+    if ( mq.matches ) {
+      mapSettings.center = [40,-20];
+      mapSettings.zoom = 1;
+      mapSettings.minZoom = 0;
+
+      console.log('mapSettings: ', mapSettings);
+    } else {
+      mapSettings.zoom = 2.5;
+      mapSettings.minZoom = 2;
+
+      console.log('mapSettings: ', mapSettings);
+    }
+   
+  }, []);
+
+  
+
+  
 
   return (
     <Layout pageName="home">
