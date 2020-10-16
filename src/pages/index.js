@@ -10,11 +10,11 @@ import Map from 'components/Map';
 import Snippet from 'components/Snippet';
 
 const LOCATION = {
-  lat: 0,
+  lat: 40,
   lng: 0,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 2;
+const DEFAULT_ZOOM = 2.5;
 
 
 const IndexPage = () => {
@@ -113,8 +113,9 @@ const IndexPage = () => {
 
   const mapSettings = {
     center: CENTER,
-    defaultBaseMap: 'OpenStreetMap',
+    defaultBaseMap: 'Mapbox',
     zoom: DEFAULT_ZOOM,
+    minZoom: 2,
     mapEffect,
   };
 
