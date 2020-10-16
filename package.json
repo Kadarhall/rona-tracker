@@ -60,12 +60,17 @@
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "bump": "npm version",
     "clean": "gatsby clean",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless",
+    "cy:verify": "cypress verify",
     "develop": "gatsby develop",
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write $PWD/'**/*.js'",
     "lint": "eslint -c ./config/eslint.config.js . --ext .js",
     "start": "yarn develop",
     "serve": "gatsby serve",
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "test:e2e:open": "start-server-and-test develop http://localhost:8000",
+    "test:e2e:run": "start-server-and-test develop http://localhost:8000"
   },
   "husky": {
     "hooks": {
@@ -81,7 +86,7 @@
   "homepage": "https://quizzical-sinoussi-0bf5de.netlify.app/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kadarhall/rona-tracker.git"
+    "url": "https://fast-earth-4740.herokuapp.com/portfolio"
   },
   "bugs": {
     "url": "hhttps://fast-earth-4740.herokuapp.com/portfolio"
