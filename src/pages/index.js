@@ -11,7 +11,7 @@ import Snippet from 'components/Snippet';
 
 const LOCATION = {
   lat: 40,
-  lng: 0,
+  lng: 20,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2.5;
