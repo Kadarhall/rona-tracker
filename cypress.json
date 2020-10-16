@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://rona-tracker.surge.sh",
+  "baseUrl": "https://quizzical-sinoussi-0bf5de.netlify.app/",
   "pluginsFile": "tests/cypress-plugins",
   "supportFile": "tests/cypress-support",
   "integrationFolder": "tests/integrations",

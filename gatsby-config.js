@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: siteMetadata.companyName,
         short_name: siteMetadata.companyName,
-        start_url: 'http://rona-tracker.surge.sh',
+        start_url: 'https://quizzical-sinoussi-0bf5de.netlify.app/',
         icon: 'src/assets/images/react-leaflet-icon.png',
       },
     },
