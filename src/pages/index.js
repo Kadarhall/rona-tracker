@@ -124,7 +124,7 @@ const IndexPage = () => {
     const mq = window.matchMedia( "(max-width: 600px)" );
 
     if ( mq.matches ) {
-      mapSettings.center = [40,-20];
+      mapSettings.center = [40,-200];
       mapSettings.zoom = 1;
       mapSettings.minZoom = 0;
 
