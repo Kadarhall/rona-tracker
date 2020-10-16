@@ -30,19 +30,19 @@ const IndexPage = () => {
 
     try {
       response = await axios.get( 'https://corona.lmao.ninja/v2/countries' );
-    } catch(e) {
+    } catch( e ) {
       console.log( `Failed to fetch countries: ${e.message}`, e );
       return;
     }
 
     const { data = [] } = response;
-    const hasData = Array.isArray(data) && data.length > 0;
+    const hasData = Array.isArray( data ) && data.length > 0;
 
-    if (!hasData) return;
+    if ( !hasData ) return;
 
     const geoJson = {
       type: 'FeatureCollection',
-      features: data.map((country = {}) => {
+      features: data.map(( country = {}) => {
         const { countryInfo = {} } = country;
         const { lat, long: lng } = countryInfo;
         return {
@@ -54,14 +54,12 @@ const IndexPage = () => {
             type: 'Point',
             coordinates: [ lng, lat ]
           }
-        }
+        };
       })
-    }
+    };
 
-    console.log('response:' , geoJson);
-
-    const geoJsonLayers = new L.GeoJSON(geoJson, {
-      pointToLayer: (feature = {}, latlng) => {
+    const geoJsonLayers = new L.GeoJSON( geoJson, {
+      pointToLayer: ( feature = {}, latlng ) => {
         const { properties = {} } = feature;
         let casesString;
         let updatedFormatted;
@@ -72,16 +70,16 @@ const IndexPage = () => {
           cases,
           deaths,
           recovered
-        } = properties
+        } = properties;
 
         casesString = `${cases}`;
 
-        if (cases > 1000) {
-          casesString = `${casesString.slice(0, -3)}k+`
+        if ( cases > 1000 ) {
+          casesString = `${casesString.slice( 0, -3 )}k+`;
         }
 
         if ( updated ) {
-          updatedFormatted = new Date(updated).toLocaleString();
+          updatedFormatted = new Date( updated ).toLocaleString();
         }
 
         const html = `
@@ -98,19 +96,19 @@ const IndexPage = () => {
             ${ casesString }
           </span> `;
 
-          return L.marker( latlng, {
-            icon: L.divIcon({
-              className: 'icon',
-              html
-            }),
-            riseOnHover: true
-          });
+        return L.marker( latlng, {
+          icon: L.divIcon({
+            className: 'icon',
+            html
+          }),
+          riseOnHover: true
+        });
 
 
       }
     });
 
-    geoJsonLayers.addTo(map);
+    geoJsonLayers.addTo( map );
   }
 
   const mapSettings = {
