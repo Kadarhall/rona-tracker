@@ -69,8 +69,8 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest --config ./config/jest.config.js",
-    "test:e2e:open": "start-server-and-test develop http://rona-tracker.surge.sh cy:open",
-    "test:e2e:run": "start-server-and-test develop http://rona-tracker.surge.sh cy:run"
+    "test:e2e:open": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:run": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "husky": {
     "hooks": {
@@ -83,7 +83,7 @@
       "yarn lint"
     ]
   },
-  "homepage": "http://rona-tracker.surge.sh",
+  "homepage": "https://quizzical-sinoussi-0bf5de.netlify.app/",
   "repository": {
     "type": "git",
     "url": "https://fast-earth-4740.herokuapp.com/portfolio"
